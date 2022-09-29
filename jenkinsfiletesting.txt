@@ -1,0 +1,17 @@
+pipeline{
+	agent any
+		stages{
+			stage('clone repo & clean'){
+				steps{
+					bat "rmdir /s /q jenkinsfiletesting"
+					bat "mvn clean -f jenkinsfiletesting"
+				}
+			}
+		stage('install'){
+			steps{
+			 bat "mvn istall -f jenkinsfiletesting"
+			}
+		}
+	}
+}
+	

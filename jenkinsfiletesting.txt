@@ -5,12 +5,11 @@ pipeline{
 				steps{
 					bat "rmdir /s /q jenkinsfiletesting"
 					bat "mvn clean -f jenkinsfiletesting"
+					bat "cd jenkinsfiletesting"
+					bat "hello together"
 				}
 			}
-		stage('install'){
-			steps{
-			 bat "mvn istall -f jenkinsfiletesting"
-			}
+		
 		}
 	}
 }

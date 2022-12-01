@@ -3,10 +3,8 @@ pipeline{
 		stages{
 			stage('clone repo & clean'){
 				steps{
-					bat "rmdir /s /q jenkinsfiletesting"
-					bat "mvn clean -f jenkinsfiletesting"
-					bat "cd jenkinsfiletesting"
-					bat "hello together"
+					sh "
+					cat jenkinsfiletesting.txt 
 				}
 			}
 		

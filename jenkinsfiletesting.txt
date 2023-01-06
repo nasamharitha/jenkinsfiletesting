@@ -3,8 +3,7 @@ pipeline{
 		stages{
 			stage('clone repo & clean'){
 				steps{
-					sh "
-					cat jenkinsfiletesting.txt 
+					git clone "https://github.com/nasamharitha/google.git"
 				}
 			}
 		
